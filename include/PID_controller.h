@@ -1,0 +1,35 @@
+#ifndef PID_CONTROLLER_H
+#define PID_CONTROLLER_H
+/**
+*@file PID_contoller.h
+*@Author Zejiang Zeng
+*@date Feb, 2017
+*@copyright 2017.2-2017.5 by Zejiang Zeng (zzeng@terpmail.umd.edu)
+*@brif A PID controller is build and to compute a new velocity given a target setpoint and actual velocity
+*/
+
+class PID_controller {
+
+private:
+
+	
+	double error, v_out,dt;
+public:
+	double Kp=0,Ki=0,Kd=0;  // initialize those param to 0;
+/**
+*@brif Build a function to set PID parameters for this controller
+*@param [double] kp, [double] ki,[double] kd
+*/
+	void PID_set(const double& ,const double& ,const double& ) ;
+
+/**
+*@brif A function to implment the PID control method when a setpoint and actual velocity are given
+*@param [double] setpoint (desired speed), [double] pv (current speed)
+*@return The controlled speed is returned in double
+*/
+	double pid_control(const double& ,double& );
+
+
+};
+
+#endif

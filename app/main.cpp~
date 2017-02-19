@@ -8,6 +8,6 @@ int main()
     TestPID test;
     test.PIDparam(test_pid);
     test.PIDcalcu();
-    std::cout<<"You passed the Unit test!"<<std::endl;
+    
     return 0;
 }
