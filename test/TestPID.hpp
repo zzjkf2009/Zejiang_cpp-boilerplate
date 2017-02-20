@@ -5,7 +5,8 @@
 *@copyright 2017.2-2017.5 by Zejiang Zeng (zzeng@terpmail.umd.edu)
 *@biref This is a unit test for the class PID_controller 
 */
-#include"PID_controller.h"
+
+#include"../include/PID_controller.h"
 #include<assert.h>
 class TestPID{
 public:
