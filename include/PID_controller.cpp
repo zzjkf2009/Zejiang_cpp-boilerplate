@@ -13,7 +13,7 @@
 *@brief The function that initiate the the p,i,d parameters
 */
 
-void PID_controller::PID_set(const double& p,const double& i,const double& d){
+void PID_controller::PID_set( double p, double i, double d){
 
   
 }
@@ -24,8 +24,8 @@ void PID_controller::PID_set(const double& p,const double& i,const double& d){
 *@return The controlled speed is returned in double
 */
 
-double PID_controller::pid_control(const double& setpoint, double& pv){
+double PID_controller::pid_control( double setpoint, double pv){
 
 
-return 2.333;  // You need to put the PID control method here instead of return a consant number
+return 3000;  // You need to put the PID control method here instead of return a consant number
 }

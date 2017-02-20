@@ -15,19 +15,19 @@ private:
 	
 	double error, v_out,dt;
 public:
-	double Kp=0,Ki=0,Kd=0;
+	double Kp=0,Ki=0,Kd=0;  // initialize those param to 0;
 /**
 *@brif Build a function to set PID parameters for this controller
 *@param [double] kp, [double] ki,[double] kd
 */
-	void PID_set(const double& ,const double& ,const double& ) ;
+	void PID_set( double p, double i, double d) ;
 
 /**
 *@brif A function to implment the PID control method when a setpoint and actual velocity are given
 *@param [double] setpoint (desired speed), [double] pv (current speed)
 *@return The controlled speed is returned in double
 */
-	double pid_control(const double& ,double& );
+	double pid_control( double setpoint,double pv);
 
 
 };
