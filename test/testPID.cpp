@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
 #include"../include/PID_controller.h"
 #include"TestPID.hpp"
+#include"PID_controller.cpp"
+
 /*
 TEST(dummy, should_pass)
 {
@@ -10,7 +12,8 @@ TEST(dummy, should_pass)
 TEST(testPID, test_1){
     PID_controller test_pid;
     TestPID test;
-    test.PIDparam(test_pid);
-    test.PIDcalcu();
+    EXPECT_NE(test.PIDparam(test_pid),NULL);
+    EXPECT_EQ(test_pid.Calcu_error(40,10),30);
+    EXPECT_GE(0.1,test.PIDcalcu());
 
 }

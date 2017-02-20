@@ -13,16 +13,21 @@ class PID_controller {
 private:
 
 	
-	double error, v_out,dt;
+	double error,setpoint,pv,v_out,dt;
 public:
 	double Kp=0,Ki=0,Kd=0;  // initialize those param to 0;
+
 /**
 *@brif Build a function to set PID parameters for this controller
 *@param [double] kp, [double] ki,[double] kd
 */
 	void PID_set( double p, double i, double d) ;
 
-/**
+
+	double Calcu_error(double setpoint,double pv); 
+
+
+/*
 *@brif A function to implment the PID control method when a setpoint and actual velocity are given
 *@param [double] setpoint (desired speed), [double] pv (current speed)
 *@return The controlled speed is returned in double

@@ -17,7 +17,7 @@ void PID_controller::PID_set( double p, double i, double d){
 
   
 }
-double PID_controller::Calcu_error(double setpoint, double pv){
+double PID_controller::Calcu_error(double setpoint, double error){
 
 return 30000;
 }
