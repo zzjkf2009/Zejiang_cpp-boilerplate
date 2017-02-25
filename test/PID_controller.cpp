@@ -32,7 +32,7 @@ return setpoint - pv;
 */
 
 double PID_controller::pid_control(double setpoint, double pv){
-double err = Calcu_error(setpoint, pv);
+  double err = Calcu_error(setpoint, pv);
   double P = Kp * err;
   double I = Ki * err * dt;
   double prevErr = 0;
