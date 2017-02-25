@@ -16,7 +16,7 @@ public:
 and abort is called, terminating the program execution
 **/
 double PIDparam(PID_controller test_pid){
-	
+	test_pid.PID_set(10,20,30);
 	return test_pid.Kp;
 	}
 
