@@ -10,11 +10,11 @@
 
 class PID_controller {
 
-private:
+public:
 
 	
-	double error,setpoint,pv,v_out,dt;
-public:
+	double error,setpoint,pv,v_out,dt=0.1;
+
 	double Kp=0,Ki=0,Kd=0;  // initialize those param to 0;
 
 /**
