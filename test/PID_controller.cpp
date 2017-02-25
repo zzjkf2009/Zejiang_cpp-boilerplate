@@ -14,12 +14,15 @@
 */
 
 void PID_controller::PID_set( double p, double i, double d){
-
+  Kp = p;
+  Ki = i;
+  Kd = d;
+ 
   
 }
 double PID_controller::Calcu_error(double setpoint, double pv){
 
-return 30000;
+return setpoint - pv;
 }
 
 /**
@@ -29,7 +32,13 @@ return 30000;
 */
 
 double PID_controller::pid_control(double setpoint, double pv){
+  double err = Calcu_error(setpoint, pv);
+  double P = Kp * err;
+  double I = Ki * err * dt*10;
+  double prevErr = 0;
+  double D = Kd * (err - prevErr) / (10*dt);
+  double u = P + I + D;
+  return u;
 
 
-return 3000;  // You need to put the PID control method here instead of return a consant number
 }
